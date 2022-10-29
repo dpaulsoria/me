@@ -206,8 +206,11 @@ body > .home {
   display: none;
 }
 
+.onHover {
+  transition: all 0.3s ease-in-out;
+}
+
 .onHover:hover {
-  transition: 0.3s ease;
   box-shadow: -1rem 1rem 1rem var(--black-color);
 }
 
