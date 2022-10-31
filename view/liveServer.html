@@ -48,18 +48,18 @@
       </article>
 
       <section class="border-radius container box-shadow flex-container photo-container">
-        <article class="container">
-          <div class="profile-photo">
-            <img class="border-radius" src="http://192.168.2.106:8080/static/profile.png" alt="Paul Soria's profile photo">
-          </div>
-        </article>
-        <article class="links container">
-          <div class="link">
+        <div id="photo" class="profile-photo container">
+          <img class="border-radius" src="http://192.168.2.106:8080/static/profile.png" alt="Paul Soria's profile photo">
+        </div>
+        <article class="links flex-container container">
+          <div class="link flex-container">
+            <h3>Linkedin</h3>
             <a href="https://linkedin.com/in/dpaulsoria">
               <img src="http://192.168.2.106:8080/static/linkedin.png" alt="Linkedin's logo">
             </a>
           </div>
-          <div class="link">
+          <div class="link flex-container">
+            <h3>Github</h3>
             <a href="https://github.com/dpaulsoria">
               <img src="http://192.168.2.106:8080/static/github.png" alt="Github's logo">
             </a>
@@ -77,25 +77,23 @@
       <p class="about-me">
         I am passionate about programming and understanding how some complex mechanisms work. I am really dedicated to what I like, in my family they say that I was born for this career.
       </p>
-      <div class="link">
         <a href="http://192.168.2.106:8080/static/CV-DannySoria-SoftwareDeveloper.pdf" class="btn border-radius" target="_blank" rel="noopener">Download my CV</a>
-      </div>
     </article>
     <article class="about-container flex-container">
       <h3 class="subtitle emphasis">University</h3>
       <p>
         I started my studies in 2018 at espol, I continue studying at this university until now, here is a video of the campus and its location
       </p>
-      <video controls>
-        <source src="http://192.168.2.106:8080/static/espol.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.01517936802!2d-79.96675808466465!3d-2.1478748377800585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902d72f925e5bfdb%3A0x327cdb9f7f4ba3b2!2sEscuela%20Superior%20Politecnica%20del%20Litoral!5e0!3m2!1sen!2sec!4v1666912724867!5m2!1sen!2sec" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-
       <aside class="mark">
         <small>About</small>
       </aside>
+    </article>
+    <article class="video-container flex-container">
+        <video controls>
+          <source src="http://192.168.2.106:8080/static/espol.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.01517936802!2d-79.96675808466465!3d-2.1478748377800585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902d72f925e5bfdb%3A0x327cdb9f7f4ba3b2!2sEscuela%20Superior%20Politecnica%20del%20Litoral!5e0!3m2!1sen!2sec!4v1666912724867!5m2!1sen!2sec" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </article>
   </section>
 
@@ -181,7 +179,7 @@
   </section>
 
   <section id="certifications" class="complete container flex-container">
-    <aside><h2 class="subtitle onHover">Certifications</h2></aside>
+    <h2 class="subtitle onHover">Certifications</h2>
     <article id="table-container" class="container flex-container">
       <table>
       <tr id="table-header">
@@ -199,16 +197,10 @@
         <td><i>22 Hours</i></td>
         <td><i>25 Hours</i></td>
       </tr>
-      <tr>
-        <td><div class="link">
-        <a href="http://192.168.2.106:8080/static/Certifications/DeisgnSystems.pdf" class="btn" target="_blank" rel="noopener">Download</a>
-      </div></td>
-      <td><div class="link">
-        <a href="http://192.168.2.106:8080/static/Certifications/GitGithubProfessinalCourse-Platzi.pdf" class="btn" target="_blank" rel="noopener">Download</a>
-      </div></td>
-      <td><div class="link">
-        <a href="http://192.168.2.106:8080/static/Certifications/ICL-MfML.pdf" class="btn" target="_blank" rel="noopener">Download</a>
-      </div></td>
+      <tr >
+        <td><a href="http://192.168.2.106:8080/static/Certifications/DeisgnSystems.pdf" class="btn" target="_blank" rel="noopener">Download</a></td>
+        <td><a href="http://192.168.2.106:8080/static/Certifications/GitGithubProfessinalCourse-Platzi.pdf" class="btn" target="_blank" rel="noopener">Download</a></td>
+        <td><a href="http://192.168.2.106:8080/static/Certifications/ICL-MfML.pdf" class="btn" target="_blank" rel="noopener">Download</a></td>
       </tr>
     </table>
     </article>
@@ -218,8 +210,8 @@
   </section>
 
   <section id="contact-me" class=" container contact-me flex-container">
+    <h2 class="subtitle onHover">Contact me</h2>
     <article>
-      <h2 class="subtitle onHover">Contact me</h2>
       <form class="contact-form box-shadow-1">
         <input type="text" name="name" placeholder=" Name *"
           title="Only letters and blank spaces" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required>
