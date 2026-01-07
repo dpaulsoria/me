@@ -1,0 +1,68 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+
+const allProjects = await getCollection("projects");
+
+const featured = allProjects
+  .filter((p) => p.data.featured)
+  .sort((a, b) => (a.data.order ?? 9999) - (b.data.order ?? 9999))
+  .slice(0, 3);
+---
+
+<Layout>
+  <main class="mx-auto max-w-3xl px-6 py-16">
+    <!-- HERO -->
+    <section>
+      <h1 class="text-4xl font-bold tracking-tight">
+        Danny Paul Soria - Backend / Mobile Developer
+      </h1>
+
+      <p class="mt-4 text-lg text-gray-600">
+        I build offline-first Android apps (Kotlin/Jetpack Compose) and backend APIs
+        (Laravel/Node) with MySQL/PostgreSQL. Open to remote (B2B/contractor).
+      </p>
+
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a class="btn" href="/resume">Resume</a>
+        <a class="btn" href="/projects">Projects</a>
+        <a class="btn" href="https://github.com/dpaulsoria" target="_blank">GitHub</a>
+        <a class="btn" href="https://linkedin.com/in/dpaulsoria" target="_blank">LinkedIn</a>
+        <a class="btn" href="mailto:dw926@proton.me">Email</a>
+      </div>
+    </section>
+
+    <!-- FEATURED PROJECTS -->
+    <section class="mt-14">
+      <div class="flex items-baseline justify-between">
+        <h2 class="text-2xl font-bold">Featured projects</h2>
+        <a class="text-sm underline" href="/projects">View all</a>
+      </div>
+
+      {featured.length === 0 ? (
+        <p class="mt-4 text-gray-600">
+          No featured projects yet. Set <code>featured: true</code> and an <code>order</code> number in a project markdown.
+        </p>
+      ) : (
+        <div class="mt-6 grid gap-4">
+          {featured.map((p) => (
+            <article class="rounded-xl border p-5">
+              <h3 class="text-lg font-semibold">{p.data.title}</h3>
+              <p class="mt-2 text-gray-600">{p.data.description}</p>
+
+              {p.data.stack?.length ? (
+                <p class="mt-3 text-sm text-gray-500">{p.data.stack.join(" · ")}</p>
+              ) : null}
+
+              <div class="mt-4 flex gap-4">
+                <a class="underline" href={`/projects/${p.slug}/`}>Details</a>
+                {p.data.repo ? <a class="underline" href={p.data.repo} target="_blank">Repo</a> : null}
+                {p.data.url ? <a class="underline" href={p.data.url} target="_blank">Live</a> : null}
+              </div>
+            </article>
+          ))}
+        </div>
+      )}
+    </section>
+  </main>
+</Layout>
