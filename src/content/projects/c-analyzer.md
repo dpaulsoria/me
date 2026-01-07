@@ -68,4 +68,4 @@ python ui/app.py
 ## 📷 Screenshots
 
 ![C Analyzer Result](../../../public/images/c-analyzer/result.png) 
-![Gif](../../../public/images/c-analyzer/cAnalyzer.gif)
+![Gif](https://github-production-user-asset-6210df.s3.amazonaws.com/72895299/532935237-333a1754-5c63-4348-aeab-4e9064707f3c.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20260107%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260107T164819Z&X-Amz-Expires=300&X-Amz-Signature=a6bf0844da6c4221880fa15f67edec63b0305d853e6f0e4f33937920bb58d760&X-Amz-SignedHeaders=host)
