@@ -25,8 +25,8 @@ const featured = allProjects
       </p>
 
       <div class="mt-8 flex flex-wrap gap-3">
-        <a class="btn" href=`${base}resume/`>Resume</a>
-        <a class="btn" href=`${base}projects/`>Projects</a>
+        <a class="btn" href=`${base}/resume/`>Resume</a>
+        <a class="btn" href=`${base}/projects/`>Projects</a>
         <a class="btn" href="https://github.com/dpaulsoria" target="_blank">GitHub</a>
         <a class="btn" href="https://linkedin.com/in/dpaulsoria" target="_blank">LinkedIn</a>
         <a class="btn" href="mailto:dw926@proton.me">Email</a>
@@ -37,7 +37,7 @@ const featured = allProjects
     <section class="mt-14">
       <div class="flex items-baseline justify-between">
         <h2 class="text-2xl font-bold">Featured projects</h2>
-        <a class="text-sm underline" href=`${base}projects`>View all</a>
+        <a class="text-sm underline" href=`${base}/projects`>View all</a>
       </div>
 
       {featured.length === 0 ? (
@@ -56,7 +56,7 @@ const featured = allProjects
               ) : null}
 
               <div class="mt-4 flex gap-4">
-                <a class="underline" href={`${base}projects/${p.slug}/`}>Details</a>
+                <a class="underline" href={`${base}/projects/${p.slug}/`}>Details</a>
                 {p.data.repo ? <a class="underline" href={p.data.repo} target="_blank">Repo</a> : null}
                 {p.data.url ? <a class="underline" href={p.data.url} target="_blank">Live</a> : null}
               </div>
